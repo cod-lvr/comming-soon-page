@@ -1,11 +1,118 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
 body {
   font-family: "Libre Franklin", sans-serif;
-  padding: 3rem 1rem;
+  padding: 3rem 2rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
   font-size: 20px;
+  height: 100vh;
+}
+
+@media (min-width: 1440px) {
+  body {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+  }
+}
+
+input {
+  width: 90%;
+  border: 2px solid #c2d3ff;
+  padding: 0.8rem 0.9rem;
+  border-radius: 20px;
+  color: #c2d3ff;
+}
+
+input::-webkit-input-placeholder {
+  color: #c2d3ff;
+}
+
+input:-ms-input-placeholder {
+  color: #c2d3ff;
+}
+
+input::-ms-input-placeholder {
+  color: #c2d3ff;
+}
+
+input::placeholder {
+  color: #c2d3ff;
+}
+
+input:focus {
+  outline: none;
+}
+
+@media (min-width: 1440px) {
+  input {
+    width: 30%;
+    display: inline-block;
+  }
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 0.8rem 0.9rem;
+  border-radius: 20px;
+  outline: none;
+  border: 0;
+  background-color: #4f7df3;
+  color: #fff;
+  -webkit-box-shadow: 0 4px 8px #4f7df3;
+          box-shadow: 0 4px 8px #4f7df3;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c2d3ff;
+}
+
+@media (min-width: 1440px) {
+  button {
+    width: 10%;
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+i {
+  width: 20px;
+  margin: 0.5rem;
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  padding: 0.4rem;
+  cursor: pointer;
+  color: #4f7df3;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+i:hover {
+  background-color: #4f7df3;
+  color: #f1f1f1;
+}
+
+@media (min-width: 1440px) {
+  i {
+    width: 30px;
+    padding: 0.6rem;
+    font-size: 22px;
+  }
 }
 
 nav {
@@ -16,9 +123,15 @@ nav img {
   width: 20%;
 }
 
+@media (min-width: 1440px) {
+  nav img {
+    width: 100%;
+  }
+}
+
 main {
   width: 100%;
-  margin: 2rem 0 5rem;
+  margin: 2rem 0 6rem;
 }
 
 main .content-box {
@@ -26,7 +139,7 @@ main .content-box {
 }
 
 main .content-box h2 {
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   font-weight: 300;
   color: #969696;
 }
@@ -37,25 +150,14 @@ main .content-box h2 span {
 }
 
 main .content-box p {
-  font-size: 0.97rem;
+  font-size: 13px;
   font-weight: 300;
+  color: #969696;
 }
 
 main form {
   width: 100%;
   padding: 1rem 0;
-}
-
-main form input {
-  width: 90%;
-  border: 2px solid #c2d3ff;
-  padding: 0.8rem 0.9rem;
-  border-radius: 16px;
-  color: #c2d3ff;
-}
-
-main form input:focus {
-  outline: none;
 }
 
 main form .err-mesg {
@@ -64,30 +166,46 @@ main form .err-mesg {
   display: none;
 }
 
-main form button {
-  width: 100%;
-  margin-top: 15px;
-  padding: 0.8rem 0.9rem;
-  border-radius: 16px;
-  outline: none;
-  border: 0;
-  background-color: #4f7df3;
-  color: #fff;
-  -webkit-box-shadow: 0 4px 8px #4f7df3;
-          box-shadow: 0 4px 8px #4f7df3;
-}
-
-main form button:hover {
-  background-color: #c2d3ff;
-}
-
 main .photo {
   width: 100%;
-  margin-top: 20px;
+  margin: 40px 0 20px;
 }
 
 main .photo img {
   width: 100%;
+}
+
+@media (min-width: 1440px) {
+  main {
+    margin: 1rem 0 6rem;
+  }
+  main .content-box {
+    margin: 0;
+  }
+  main .content-box h2 {
+    font-size: 3rem;
+  }
+  main .content-box p {
+    font-size: 25px;
+    font-weight: 300;
+  }
+  main form {
+    width: 100%;
+    padding: 1rem 0;
+    position: relative;
+  }
+  main form .err-mesg {
+    position: absolute;
+    top: 70%;
+    left: 30%;
+  }
+  main .photo {
+    width: 100%;
+    margin: 40px 0 60px;
+  }
+  main .photo img {
+    width: 50%;
+  }
 }
 
 footer .social-icons {
@@ -106,16 +224,14 @@ footer .social-icons {
           align-items: center;
 }
 
-footer .social-icons img {
-  width: 25px;
-  margin: 0 0.5rem;
-  border: 1px solid #969696;
-  border-radius: 50%;
-  padding: 0.4rem;
-}
-
 footer p {
   color: #969696;
-  font-size: 14px;
+  font-size: 12px;
+}
+
+@media (min-width: 1440px) {
+  footer p {
+    font-size: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

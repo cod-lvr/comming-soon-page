@@ -1,0 +1,88 @@
+body {
+  font-family: "Libre Franklin", sans-serif;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 20px;
+  height: 100vh;
+  @media (min-width: 1440px) {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+}
+
+input {
+  width: 90%;
+  border: 2px solid $Pale-Blue;
+  padding: 0.8rem 0.9rem;
+  border-radius: $border-r;
+  color: $Pale-Blue;
+  &::placeholder {
+    color: $Pale-Blue;
+  }
+  &:focus {
+    outline: none;
+  }
+  @media (min-width: 1440px) {
+    width: 30%;
+    display: inline-block;
+  }
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 0.8rem 0.9rem;
+  border-radius: $border-r;
+  outline: none;
+  border: 0;
+  background-color: $Blue;
+  color: #fff;
+  box-shadow: 0 4px 8px $Blue;
+  cursor: pointer;
+  &:hover {
+    background-color: $Pale-Blue;
+  }
+  @media (min-width: 1440px) {
+    width: 10%;
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+i {
+  width: 20px;
+  margin: 0.5rem;
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  padding: 0.4rem;
+  cursor: pointer;
+  color: $Blue;
+  font-size: 19px;
+  cursor: pointer;
+  &:hover {
+    background-color: $Blue;
+    color: #f1f1f1;
+  }
+  @media (min-width: 1440px) {
+    width: 30px;
+    padding: 0.6rem;
+    font-size: 22px;
+  }
+}
+
+nav {
+  padding: 1rem;
+  img {
+    width: 20%;
+  }
+  @media (min-width: 1440px) {
+    img {
+      width: 100%;
+    }
+  }
+}
